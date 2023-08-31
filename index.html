@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shuckerVC - cultivating Pearls of Opportunity</title>
+    <title>ShuckerVC - Cultivating Pearls of Opportunity</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('https://example.com/path/to/your/background.jpg');
+            background-size: cover;
+            background-position: center;
             color: #333;
             display: flex;
             align-items: center;
@@ -18,27 +20,31 @@
         }
 
         .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        img {
+            max-width: 80%;
+            height: auto;
         }
 
-        p {
-            font-size: 1.2em;
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            img {
+                max-width: 60%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>shuckerVC</h1>
-        <p>Just as oysters nurture their pearls, we're meticulously cultivating something extraordinary. Stay tuned as we unveil the first gem we've shucked.</p>
+        <img src="https://example.com/path/to/your/logo.png" alt="ShuckerVC Logo">
     </div>
 </body>
 </html>
