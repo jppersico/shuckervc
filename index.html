@@ -15,6 +15,7 @@
         /* Set website background color */
         body {
             background-color: #b5aa99;
+            margin-bottom: 60px; /* Reserve space for footer */
         }
 
         /* Header styling */
@@ -93,8 +94,8 @@
             position: absolute; /* Positioning the LinkedIn logo */
             bottom: 10px; /* Spacing from the bottom */
             right: 10px; /* Spacing from the right */
-            height: 36px; /* Doubled LinkedIn logo size */
-            max-width: 36px; /* Doubled LinkedIn logo size */
+            height: 72px; /* Doubled LinkedIn logo size */
+            max-width: 72px; /* Doubled LinkedIn logo size */
         }
 
         /* Footer styling */
@@ -125,6 +126,7 @@
             .profile-section {
                 flex-direction: column;
                 align-items: center;
+                margin-bottom: 80px; /* Increase margin to accommodate footer */
             }
 
             .profile-card {
@@ -133,6 +135,11 @@
 
             .team-title {
                 padding: 30px 0;
+            }
+
+            .footer {
+                position: static; /* Remove fixed positioning */
+                margin-top: 20px; /* Adjust margin to prevent overlap */
             }
         }
     </style>
@@ -174,8 +181,7 @@
 
 <!-- Footer -->
 <div class="footer">
-    shuckerVC LLC
-    <span class="copyright">&copy; 2024</span>
+    shuckerVC <span class="copyright">&copy; 2024</span>
 </div>
 
 <script>
@@ -196,4 +202,3 @@
 
 </body>
 </html>
-
