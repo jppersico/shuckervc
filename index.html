@@ -21,73 +21,73 @@
         .header {
             background-color: #FFC009;
             width: 100%;
-            padding: 5px 0;
-        }
-
-        /* Centering the logo */
-        .logo-container {
+            padding: 15px 0;
             text-align: center;
-            background-color: white;
-            padding: 20px 0;
-        }
-        .logo {
-            max-width: 80%;
-            height: auto;
+            color: white;
+            font-size: 1.5em;
         }
 
         /* Team title styling */
         .team-title-container {
-            background-color: white;
-            padding: 20px;
+            background-color: #b5aa99; /* Match the body background */
+            padding: 30px 0; /* More space for the title */
             text-align: center;
         }
         .team-title {
             font-size: 2em;
-            color: #333;
-            margin-bottom: 20px;
+            color: white; /* Contrast color for readability */
         }
 
         /* Profile section styling */
         .profile-section {
             display: flex;
-            justify-content: space-around;
+            justify-content: center; /* Align with the main logo */
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 20px; /* Adjusted gap between the profile cards */
+            padding: 20px 0; /* Space above and below the profile cards */
+            max-width: 1200px; /* Max width to align with the logo */
+            margin: auto; /* Center the section */
         }
+
         .profile-card {
-            display: flex;
             background-color: white;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            width: calc(50% - 10px);
-            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: calc(50% - 40px); /* Adjust width for tighter grouping */
+            display: flex;
             align-items: center;
         }
+
         .profile-card img {
             border-radius: 5px;
             width: 100px;
             height: auto;
             margin-right: 20px;
         }
+
         .profile-info {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             flex-grow: 1;
         }
+
         .profile-info h3, .profile-info p, a {
             margin: 5px 0;
         }
+
         .linkedin-logo {
+            height: 18px;
             margin-top: 5px;
         }
 
         /* Responsive Design */
         @media only screen and (max-width: 767px) {
             .profile-section {
-                justify-content: center;
+                gap: 10px;
             }
+
             .profile-card {
                 width: 100%;
             }
@@ -96,19 +96,15 @@
 </head>
 <body>
 
-<div class="header"></div>
+<div class="header">ShuckerVC</div>
 
-<div class="logo-container">
-    <img src="Color logo with background.png" alt="ShuckerVC Logo" class="logo">
-</div>
-
-<!-- Title for the Team Section -->
+<!-- Team Title Section -->
 <div class="team-title-container">
     <div class="team-title">Our Team</div>
 </div>
 
 <!-- Profile Section -->
-<div class="profile-section" id="profileSection">
+<div class="profile-section">
     <div class="profile-card" id="profile1">
         <img src="JP.png" alt="Jean-Philippe 'JP' Persico" class="profile-img">
         <div class="profile-info">
@@ -133,8 +129,8 @@
 
 <script>
     window.onload = function() {
-        var container = document.getElementById("profileSection");
-        var profiles = Array.prototype.slice.call(container.children);
+        var container = document.querySelector('.profile-section');
+        var profiles = Array.from(container.children);
         var frag = document.createDocumentFragment();
         while (profiles.length) {
             frag.appendChild(profiles.splice(Math.floor(Math.random() * profiles.length), 1)[0]);
@@ -145,4 +141,5 @@
 
 </body>
 </html>
+
 
