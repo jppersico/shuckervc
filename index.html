@@ -25,6 +25,7 @@
             text-align: center;
             color: white;
             font-size: 1.5em;
+            display: none; /* Hide the header */
         }
 
         /* Centering the logo */
@@ -65,6 +66,7 @@
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: calc(50% - 20px);
+            max-width: 400px; /* Limiting maximum width of the card */
         }
 
         .profile-card img {
@@ -86,12 +88,17 @@
         }
 
         .linkedin-logo {
-            height: 18px;
+            height: 5%; /* 5% of original height */
             margin-top: 5px;
+            margin-left: 5px; /* Adjust left margin for alignment */
         }
 
         /* Responsive Design */
         @media only screen and (max-width: 767px) {
+            .header {
+                display: block; /* Show header on smaller screens */
+            }
+
             .profile-section {
                 flex-direction: column;
                 align-items: center;
@@ -109,7 +116,7 @@
 </head>
 <body>
 
-<div class="header">ShuckerVC</div>
+<div class="header"></div>
 
 <div class="logo-container">
     <img src="Color logo with background.png" alt="ShuckerVC Logo" class="logo">
@@ -156,4 +163,5 @@
 
 </body>
 </html>
+
 
