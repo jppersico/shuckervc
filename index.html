@@ -59,6 +59,7 @@
         }
 
         .profile-card {
+            position: relative; /* Positioning context for absolute positioning of LinkedIn logo */
             display: flex;
             align-items: center;
             background-color: white;
@@ -88,9 +89,10 @@
         }
 
         .linkedin-logo {
-            height: 18px; /* Increased LinkedIn logo size */
-            margin-top: 5px;
-            margin-left: 10px; /* Adjusted left margin for alignment */
+            position: absolute; /* Positioning the LinkedIn logo */
+            bottom: 10px; /* Spacing from the bottom */
+            right: 10px; /* Spacing from the right */
+            height: 24px; /* Increased LinkedIn logo size */
             max-width: 24px; /* Increased LinkedIn logo size */
         }
 
