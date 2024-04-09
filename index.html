@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shuckerVC - Cultivating Pearls of Opportunity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('./shuckerVCBG.jpg'); /* Relative path */
-            background-size: cover;
-            background-position: center;
-            color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+        /* Basic Reset */
+        body, h1, h2, h3, p {
             margin: 0;
             padding: 0;
         }
 
-        .container {
-            text-align: center;
+        /* Header styling */
+        .header {
+            height: 30px;
+            background-color: #FFC009;
+            width: 100%;
         }
 
-        img {
-            max-width: 80%;
+        /* Centering the logo */
+        .logo-container {
+            text-align: center;
+            padding: 10px 0; /* Adds padding above and below the logo */
+        }
+        .logo {
+            max-width: 80%; /* Sets the maximum width of the logo to 80% of its container */
             height: auto;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            img {
-                max-width: 60%;
-            }
+        /* Profile section styling */
+        .profile-section {
+            display: flex;
+            flex-direction: column; /* Stacks the profiles on top of each other */
+            align-items: center; /* Centers the profiles horizontally */
+            gap: 20px; /* Adjusts the space between profile cards */
+            margin: 20px 0; /* Adds margin above and below the profile section */
+        }
+        .profile-card {
+            text-align: center;
+            width: 90%; /* Adjust the width of the card as needed */
+            max-width: 300px; /* Maximum width for larger screens */
+        }
+        .profile-card img {
+            width: 100%; /* Makes the image responsive within the card */
+            height: auto;
+            border-radius: 50%; /* Optional: Makes the image round */
         }
 
-        @media (max-width: 480px) {
-            img {
-                max-width: 90%;
+        /* Responsive Design */
+        @media only screen and (min-width: 600px) {
+            .profile-section {
+                flex-direction: row; /* Sets profiles side by side on larger screens */
+                justify-content: center; /* Center cards in the container */
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="./logo.png" alt="shuckerVC"> <!-- Relative path -->
+
+<div class="header"></div>
+
+<div class="logo-container">
+    <img src="Color logo with background.png" alt="ShuckerVC Logo" class="logo">
+</div>
+
+<!-- Profile Section -->
+<div class="profile-section">
+    <div class="profile-card">
+        <img src="JP.jpeg" alt="Jean-Philippe 'JP' Persico" class="profile-img">
+        <h3>Jean-Philippe 'JP' Persico</h3>
+        <p>Managing Partner</p>
+        <a href="http://linkedin.com/in/jppersico/" target="_blank">View LinkedIn</a>
     </div>
+    <div class="profile-card">
+        <img src="graham.jpeg" alt="Graham Siegel" class="profile-img">
+        <h3>Graham Siegel</h3>
+        <p>Managing Partner</p>
+        <a href="https://www.linkedin.com/in/grahamsiegel/" target="_blank">View LinkedIn</a>
+    </div>
+</div>
+
 </body>
 </html>
