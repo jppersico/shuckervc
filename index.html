@@ -42,6 +42,7 @@
         /* Team title styling */
         .team-title {
             font-size: 2em;
+            font-weight: bold; /* Make the title bold */
             color: black; /* Black color for the title */
             text-align: center;
             padding: 50px 0;
@@ -92,8 +93,26 @@
             position: absolute; /* Positioning the LinkedIn logo */
             bottom: 10px; /* Spacing from the bottom */
             right: 10px; /* Spacing from the right */
-            height: 24px; /* Increased LinkedIn logo size */
-            max-width: 24px; /* Increased LinkedIn logo size */
+            height: 36px; /* Doubled LinkedIn logo size */
+            max-width: 36px; /* Doubled LinkedIn logo size */
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #FFC009;
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Copyright styling */
+        .copyright {
+            font-size: 0.8em;
+            display: inline-block;
+            margin-left: 5px;
         }
 
         /* Responsive Design */
@@ -127,7 +146,7 @@
 </div>
 
 <!-- Team Title -->
-<div class="team-title">Our Team</div>
+<div class="team-title"><strong>Our Team</strong></div>
 
 <!-- Profile Section -->
 <div class="profile-section" id="profileSection">
@@ -153,6 +172,12 @@
     </div>
 </div>
 
+<!-- Footer -->
+<div class="footer">
+    ShuckerVC LLC
+    <span class="copyright">&copy; 2024</span>
+</div>
+
 <script>
     function shuffleProfiles() {
         var container = document.getElementById("profileSection");
@@ -171,3 +196,4 @@
 
 </body>
 </html>
+
