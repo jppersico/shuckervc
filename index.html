@@ -4,22 +4,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         /* Basic Reset */
-        body, h1, h2, h3, p {
+        body, h1, h2, h3, p, a {
             margin: 0;
             padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Updated font */
+            text-decoration: none; /* Removes underline from links */
+            color: inherit; /* Inherits text color for links */
+        }
+
+        /* Set website background color */
+        body {
+            background-color: #b5aa99;
         }
 
         /* Header styling */
         .header {
-            height: 30px;
             background-color: #FFC009;
             width: 100%;
+            padding: 5px 0; /* Adjust padding to increase height */
         }
 
         /* Centering the logo */
         .logo-container {
             text-align: center;
-            padding: 10px 0; /* Adds padding above and below the logo */
+            background-color: white; /* Sets a white background for the logo section */
+            padding: 20px 0; /* Adds padding above and below the logo */
         }
         .logo {
             max-width: 80%; /* Sets the maximum width of the logo to 80% of its container */
@@ -31,18 +40,27 @@
             display: flex;
             flex-direction: column; /* Stacks the profiles on top of each other */
             align-items: center; /* Centers the profiles horizontally */
-            gap: 20px; /* Adjusts the space between profile cards */
-            margin: 20px 0; /* Adds margin above and below the profile section */
+            gap: 40px; /* Adjusts the space between profile cards */
+            padding: 40px 0; /* Adds padding above and below the profile section */
         }
         .profile-card {
             text-align: center;
-            width: 90%; /* Adjust the width of the card as needed */
+            background-color: white; /* Profile cards have a white background */
+            padding: 20px;
+            border-radius: 5px; /* Rounds the corners of the profile card */
+            width: 60%; /* Adjust the width of the card as needed */
             max-width: 300px; /* Maximum width for larger screens */
         }
         .profile-card img {
-            width: 100%; /* Makes the image responsive within the card */
+            width: 60%; /* Adjusted image size */
             height: auto;
-            border-radius: 50%; /* Optional: Makes the image round */
+            border-radius: 50%; /* Makes the image round */
+        }
+
+        /* LinkedIn logo link */
+        .linkedin-logo {
+            margin-top: 10px;
+            width: 20%; /* Size of the LinkedIn logo */
         }
 
         /* Responsive Design */
@@ -50,6 +68,10 @@
             .profile-section {
                 flex-direction: row; /* Sets profiles side by side on larger screens */
                 justify-content: center; /* Center cards in the container */
+                gap: 60px; /* Increase gap for larger screens */
+            }
+            .profile-card {
+                width: 80%; /* Adjust the width on larger screens if needed */
             }
         }
     </style>
@@ -68,13 +90,17 @@
         <img src="JP.jpeg" alt="Jean-Philippe 'JP' Persico" class="profile-img">
         <h3>Jean-Philippe 'JP' Persico</h3>
         <p>Managing Partner</p>
-        <a href="http://linkedin.com/in/jppersico/" target="_blank">View LinkedIn</a>
+        <a href="http://linkedin.com/in/jppersico/" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+        </a>
     </div>
     <div class="profile-card">
         <img src="graham.jpeg" alt="Graham Siegel" class="profile-img">
         <h3>Graham Siegel</h3>
         <p>Managing Partner</p>
-        <a href="https://www.linkedin.com/in/grahamsiegel/" target="_blank">View LinkedIn</a>
+        <a href="https://www.linkedin.com/in/grahamsiegel/" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+        </a>
     </div>
 </div>
 
