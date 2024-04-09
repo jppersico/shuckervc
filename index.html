@@ -38,21 +38,21 @@
         /* Profile section styling */
         .profile-section {
             display: flex;
-            flex-direction: column; /* Vertical stack on smaller screens */
+            flex-direction: row; /* Horizontal layout */
+            flex-wrap: wrap; /* Wrap onto the next line if needed */
+            justify-content: space-around; /* Evenly space the profile cards */
             align-items: center;
             gap: 40px; /* Gap between profile cards */
             padding: 40px 0; /* Padding around profile section */
         }
         .profile-card {
-            text-align: left; /* Align text to the left */
+            display: flex;
+            align-items: center; /* Align items vertically within the card */
             background-color: white; /* White background for profile cards */
             padding: 20px;
             border-radius: 5px; /* Rounded corners for profile cards */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
-            display: flex;
-            align-items: center; /* Align items within the card */
-            width: 100%; /* Full width cards */
-            max-width: 940px; /* Max width for larger screens */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+            width: calc(50% - 40px); /* Half width minus the gap */
         }
         .profile-card img {
             border-radius: 5px; /* Slight rounding on images */
@@ -64,19 +64,24 @@
             display: flex;
             flex-direction: column; /* Stack info vertically */
             justify-content: center;
+            align-items: flex-start; /* Align text to the start */
         }
         .profile-info h3, .profile-info p {
             margin: 5px 0; /* Margin for name and title */
         }
         .linkedin-logo {
-            height: 1.2em; /* LinkedIn logo height relative to text */
-            border-radius: 0; /* No rounding on LinkedIn logo */
+            width: auto; /* Auto width for the LinkedIn logo */
+            height: 1em; /* Height to match the text size */
+            margin-top: 5px; /* Margin above LinkedIn logo */
         }
 
         /* Responsive Design */
-        @media only screen and (min-width: 600px) {
+        @media only screen and (max-width: 600px) {
+            .profile-section {
+                flex-direction: column; /* Stack vertically on smaller screens */
+            }
             .profile-card {
-                /* Same styles as above, no changes needed for larger screens */
+                width: 100%; /* Full width cards on smaller screens */
             }
         }
     </style>
@@ -114,4 +119,4 @@
 </div>
 
 </body>
-</html>
+</html
