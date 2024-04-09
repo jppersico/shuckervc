@@ -7,71 +7,92 @@
         body, h1, h2, h3, p, a {
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif; /* Updated font */
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Helvetica Neue font */
             text-decoration: none; /* Removes underline from links */
             color: inherit; /* Inherits text color for links */
         }
 
         /* Set website background color */
         body {
-            background-color: #b5aa99;
+            background-color: #b5aa99; /* Background color */
         }
 
         /* Header styling */
         .header {
-            background-color: #FFC009;
+            background-color: #FFC009; /* Header color */
             width: 100%;
-            padding: 5px 0; /* Adjust padding to increase height */
+            padding: 5px 0; /* Header padding */
         }
 
         /* Centering the logo */
         .logo-container {
             text-align: center;
-            background-color: white; /* Sets a white background for the logo section */
-            padding: 20px 0; /* Adds padding above and below the logo */
+            background-color: white; /* White background for the logo */
+            padding: 20px 0; /* Logo padding */
         }
         .logo {
-            max-width: 80%; /* Sets the maximum width of the logo to 80% of its container */
+            max-width: 80%; /* Logo max width */
             height: auto;
         }
 
         /* Profile section styling */
         .profile-section {
             display: flex;
-            flex-direction: column; /* Stacks the profiles on top of each other */
-            align-items: center; /* Centers the profiles horizontally */
-            gap: 40px; /* Adjusts the space between profile cards */
-            padding: 40px 0; /* Adds padding above and below the profile section */
+            flex-direction: column; /* Vertical stack on smaller screens */
+            align-items: center;
+            gap: 40px; /* Gap between profile cards */
+            padding: 40px 0; /* Padding around profile section */
         }
         .profile-card {
             text-align: center;
-            background-color: white; /* Profile cards have a white background */
+            background-color: white; /* White background for profile cards */
             padding: 20px;
-            border-radius: 5px; /* Rounds the corners of the profile card */
-            width: 60%; /* Adjust the width of the card as needed */
-            max-width: 300px; /* Maximum width for larger screens */
+            border-radius: 5px; /* Rounded corners for profile cards */
+            width: 80%; /* Width of profile cards */
+            max-width: 500px; /* Max width for profile cards */
         }
         .profile-card img {
-            width: 60%; /* Adjusted image size */
+            width: 60%; /* Width of profile images */
             height: auto;
-            border-radius: 50%; /* Makes the image round */
+            border-radius: 50%; /* Circular profile images */
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column; /* Stack info vertically on smaller screens */
+            align-items: center;
+        }
+
+        h3, p {
+            margin-bottom: 10px; /* Space below name and title */
         }
 
         /* LinkedIn logo link */
         .linkedin-logo {
-            margin-top: 10px;
-            width: 20%; /* Size of the LinkedIn logo */
+            height: 1.2em; /* LinkedIn logo height relative to text */
         }
 
         /* Responsive Design */
         @media only screen and (min-width: 600px) {
             .profile-section {
-                flex-direction: row; /* Sets profiles side by side on larger screens */
-                justify-content: center; /* Center cards in the container */
-                gap: 60px; /* Increase gap for larger screens */
+                flex-direction: row; /* Horizontal layout on larger screens */
+                justify-content: center;
+                gap: 60px; /* Larger gap on wider screens */
             }
             .profile-card {
-                width: 80%; /* Adjust the width on larger screens if needed */
+                flex-direction: row; /* Horizontal layout for profile cards */
+                align-items: center; /* Center items vertically in the card */
+            }
+            .profile-card img {
+                width: 30%; /* Smaller images on larger screens */
+            }
+            .profile-info {
+                flex-direction: row; /* Side-by-side info on larger screens */
+                justify-content: space-between;
+                width: 70%;
+            }
+            .linkedin-logo {
+                height: 1em; /* Smaller LinkedIn logo on larger screens */
             }
         }
     </style>
@@ -88,19 +109,27 @@
 <div class="profile-section">
     <div class="profile-card">
         <img src="JP.jpeg" alt="Jean-Philippe 'JP' Persico" class="profile-img">
-        <h3>Jean-Philippe 'JP' Persico</h3>
-        <p>Managing Partner</p>
-        <a href="http://linkedin.com/in/jppersico/" target="_blank">
-            <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
-        </a>
+        <div class="profile-info">
+            <div>
+                <h3>Jean-Philippe 'JP' Persico</h3>
+                <p>Managing Partner</p>
+            </div>
+            <a href="http://linkedin.com/in/jppersico/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+            </a>
+        </div>
     </div>
     <div class="profile-card">
         <img src="graham.jpeg" alt="Graham Siegel" class="profile-img">
-        <h3>Graham Siegel</h3>
-        <p>Managing Partner</p>
-        <a href="https://www.linkedin.com/in/grahamsiegel/" target="_blank">
-            <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
-        </a>
+        <div class="profile-info">
+            <div>
+                <h3>Graham Siegel</h3>
+                <p>Managing Partner</p>
+            </div>
+            <a href="https://www.linkedin.com/in/grahamsiegel/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+            </a>
+        </div>
     </div>
 </div>
 
