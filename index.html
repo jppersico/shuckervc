@@ -21,11 +21,11 @@
         .header {
             background-color: #FFC009;
             width: 100%;
-            height: 50px;
+            height: 25px; /* Reduced header line thickness */
             text-align: center;
             color: white;
             font-size: 2em;
-            padding: 15px 0;
+            padding: 10px 0;
         }
 
         /* Centering the logo */
@@ -88,17 +88,17 @@
         }
 
         .linkedin-logo {
-            height: 15px; /* Adjusted logo height */
-            margin-top: 0px;
-            margin-left: 0px; /* Adjust left margin for alignment */
-            max-width: 30px; /* Reduce LinkedIn logo size by 80% */
+            height: 18px; /* Increased LinkedIn logo size */
+            margin-top: 5px;
+            margin-left: 10px; /* Adjusted left margin for alignment */
+            max-width: 24px; /* Increased LinkedIn logo size */
         }
 
         /* Responsive Design */
         @media only screen and (max-width: 767px) {
             .header {
-                height: 30px; /* Adjust header height for smaller screens */
-                padding: 10px 0;
+                height: 15px; /* Adjusted header line thickness for smaller screens */
+                padding: 5px 0;
             }
 
             .profile-section {
@@ -128,7 +128,7 @@
 <div class="team-title">Our Team</div>
 
 <!-- Profile Section -->
-<div class="profile-section">
+<div class="profile-section" id="profileSection">
     <div class="profile-card" id="profile1">
         <img src="JP.png" alt="Jean-Philippe 'JP' Persico" class="profile-img">
         <div class="profile-info">
@@ -152,7 +152,7 @@
 </div>
 
 <script>
-    window.onload = function() {
+    function shuffleProfiles() {
         var container = document.getElementById("profileSection");
         var profiles = Array.prototype.slice.call(container.getElementsByClassName('profile-card'));
         var frag = document.createDocumentFragment();
@@ -160,6 +160,10 @@
             frag.appendChild(profiles.splice(Math.floor(Math.random() * profiles.length), 1)[0]);
         }
         container.appendChild(frag);
+    }
+
+    window.onload = function() {
+        setInterval(shuffleProfiles, 30000); // Shuffle profiles every 30 seconds
     };
 </script>
 
