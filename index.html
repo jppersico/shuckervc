@@ -27,36 +27,42 @@
             font-size: 1.5em;
         }
 
-        /* Team title styling */
-        .team-title-container {
-            background-color: #b5aa99; /* Match the body background */
-            padding: 30px 0; /* More space for the title */
+        /* Centering the logo */
+        .logo-container {
             text-align: center;
+            padding: 20px 0;
         }
+        .logo {
+            max-width: 80%;
+            height: auto;
+        }
+
+        /* Team title styling */
         .team-title {
             font-size: 2em;
-            color: white; /* Contrast color for readability */
+            color: #FFC009;
+            text-align: center;
+            padding: 50px 0;
+            background-color: #b5aa99; /* Matching the body background */
         }
 
         /* Profile section styling */
         .profile-section {
             display: flex;
-            justify-content: center; /* Align with the main logo */
+            justify-content: space-evenly;
             flex-wrap: wrap;
-            gap: 20px; /* Adjusted gap between the profile cards */
-            padding: 20px 0; /* Space above and below the profile cards */
-            max-width: 1200px; /* Max width to align with the logo */
-            margin: auto; /* Center the section */
+            gap: 20px;
+            margin: 0 5%; /* Aligning with the logo width */
         }
 
         .profile-card {
+            display: flex;
+            align-items: center;
             background-color: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: calc(50% - 40px); /* Adjust width for tighter grouping */
-            display: flex;
-            align-items: center;
+            width: calc(50% - 20px); /* Adjusted width for closer cards */
         }
 
         .profile-card img {
@@ -78,18 +84,23 @@
         }
 
         .linkedin-logo {
-            height: 18px;
+            height: 18px; /* Fixed height for LinkedIn logo */
             margin-top: 5px;
         }
 
         /* Responsive Design */
         @media only screen and (max-width: 767px) {
             .profile-section {
-                gap: 10px;
+                flex-direction: column;
+                align-items: center;
             }
 
             .profile-card {
-                width: 100%;
+                width: 100%; /* Full width on smaller screens */
+            }
+
+            .team-title {
+                padding: 30px 0; /* Reduced padding on smaller screens */
             }
         }
     </style>
@@ -98,10 +109,12 @@
 
 <div class="header">ShuckerVC</div>
 
-<!-- Team Title Section -->
-<div class="team-title-container">
-    <div class="team-title">Our Team</div>
+<div class="logo-container">
+    <img src="Color logo with background.png" alt="ShuckerVC Logo" class="logo">
 </div>
+
+<!-- Team Title -->
+<div class="team-title">Our Team</div>
 
 <!-- Profile Section -->
 <div class="profile-section">
@@ -129,8 +142,8 @@
 
 <script>
     window.onload = function() {
-        var container = document.querySelector('.profile-section');
-        var profiles = Array.from(container.children);
+        var container = document.getElementById("profileSection");
+        var profiles = Array.prototype.slice.call(container.getElementsByClassName('profile-card'));
         var frag = document.createDocumentFragment();
         while (profiles.length) {
             frag.appendChild(profiles.splice(Math.floor(Math.random() * profiles.length), 1)[0]);
@@ -141,4 +154,3 @@
 
 </body>
 </html>
-
