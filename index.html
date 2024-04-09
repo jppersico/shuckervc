@@ -7,93 +7,89 @@
         body, h1, h2, h3, p, a {
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif; /* Helvetica Neue font */
-            text-decoration: none; /* Removes underline from links */
-            color: inherit; /* Inherits text color for links */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            text-decoration: none;
+            color: inherit;
         }
 
         /* Set website background color */
         body {
-            background-color: #b5aa99; /* Background color */
+            background-color: #b5aa99;
         }
 
         /* Header styling */
         .header {
-            background-color: #FFC009; /* Header color */
+            background-color: #FFC009;
             width: 100%;
-            padding: 5px 0; /* Header padding */
+            padding: 5px 0;
         }
 
         /* Centering the logo */
         .logo-container {
             text-align: center;
-            background-color: white; /* White background for the logo */
-            padding: 20px 0; /* Logo padding */
+            background-color: white;
+            padding: 20px 0;
         }
         .logo {
-            max-width: 80%; /* Logo max width */
+            max-width: 80%;
             height: auto;
         }
 
-        /* Title styling */
-        .team-title {
+        /* Team title styling */
+        .team-title-container {
+            background-color: white;
+            padding: 20px;
             text-align: center;
-            font-size: 2em; /* Size of the title */
-            font-weight: bold; /* Make the title bold */
-            padding: 10px 0; /* Spacing above and below the title */
-            background-color: white; /* White background for the title */
-            color: #333; /* Dark color for the title text */
-            margin-bottom: 30px; /* Space below the title */
+        }
+        .team-title {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         /* Profile section styling */
         .profile-section {
             display: flex;
-            justify-content: space-around; /* Evenly space the profile cards */
-            flex-wrap: wrap; /* Wrap onto the next line if needed */
-            padding-bottom: 40px; /* Padding below profile section */
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .profile-card {
             display: flex;
-            background-color: white; /* White background for profile cards */
+            background-color: white;
             padding: 20px;
-            border-radius: 5px; /* Rounded corners for profile cards */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
-            width: calc(50% - 40px); /* Half width minus the padding */
-            max-width: 500px; /* Max width for larger screens */
-            align-items: center; /* Align items vertically */
-            margin-top: 20px; /* Spacing above each profile card */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: calc(50% - 10px);
+            max-width: 500px;
+            align-items: center;
         }
         .profile-card img {
-            border-radius: 5px; /* Slight rounding on images */
-            width: 100px; /* Fixed width for profile images */
+            border-radius: 5px;
+            width: 100px;
             height: auto;
-            margin-right: 20px; /* Space between image and text */
+            margin-right: 20px;
         }
         .profile-info {
-            flex-grow: 1; /* Take up remaining space */
             display: flex;
-            flex-direction: column; /* Stack info vertically */
-            justify-content: center;
-            align-items: flex-start; /* Align text to the start */
+            flex-direction: column;
+            align-items: flex-start;
+            flex-grow: 1;
         }
-        .profile-info h3, .profile-info p {
-            margin: 5px 0; /* Margin for name and title */
+        .profile-info h3, .profile-info p, a {
+            margin: 5px 0;
         }
         .linkedin-logo {
-            height: 18px; /* Adjusted LinkedIn logo height */
-            width: auto; /* Auto width for the LinkedIn logo */
-            margin-top: 5px; /* Margin above LinkedIn logo */
+            margin-top: 5px;
         }
 
         /* Responsive Design */
         @media only screen and (max-width: 767px) {
-            .profile-card {
-                width: 100%; /* Full width on smaller screens */
-                margin-top: 10px; /* Reduce spacing on smaller screens */
-            }
             .profile-section {
-                justify-content: center; /* Center cards on smaller screens */
+                justify-content: center;
+            }
+            .profile-card {
+                width: 100%;
             }
         }
     </style>
@@ -107,11 +103,13 @@
 </div>
 
 <!-- Title for the Team Section -->
-<div class="team-title">Our Team</div>
+<div class="team-title-container">
+    <div class="team-title">Our Team</div>
+</div>
 
 <!-- Profile Section -->
-<div class="profile-section">
-    <div class="profile-card">
+<div class="profile-section" id="profileSection">
+    <div class="profile-card" id="profile1">
         <img src="JP.png" alt="Jean-Philippe 'JP' Persico" class="profile-img">
         <div class="profile-info">
             <h3>Jean-Philippe 'JP' Persico</h3>
@@ -121,7 +119,7 @@
             </a>
         </div>
     </div>
-    <div class="profile-card">
+    <div class="profile-card" id="profile2">
         <img src="graham.png" alt="Graham Siegel" class="profile-img">
         <div class="profile-info">
             <h3>Graham Siegel</h3>
@@ -133,7 +131,18 @@
     </div>
 </div>
 
+<script>
+    window.onload = function() {
+        var container = document.getElementById("profileSection");
+        var profiles = Array.prototype.slice.call(container.children);
+        var frag = document.createDocumentFragment();
+        while (profiles.length) {
+            frag.appendChild(profiles.splice(Math.floor(Math.random() * profiles.length), 1)[0]);
+        }
+        container.appendChild(frag);
+    };
+</script>
+
 </body>
 </html>
-
 
