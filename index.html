@@ -38,7 +38,7 @@
         /* Profile section styling */
         .profile-section {
             display: flex;
-            justify-content: space-evenly; /* Evenly space the profile cards */
+            justify-content: space-around; /* Evenly space the profile cards */
             flex-wrap: wrap; /* Wrap onto the next line if needed */
             padding: 40px 0; /* Padding around profile section */
         }
@@ -48,7 +48,7 @@
             padding: 20px;
             border-radius: 5px; /* Rounded corners for profile cards */
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
-            width: calc(50% - 20px); /* Half width minus the padding */
+            width: calc(50% - 40px); /* Half width minus the padding */
             max-width: 500px; /* Max width for larger screens */
             align-items: center; /* Align items vertically */
         }
@@ -69,8 +69,8 @@
             margin: 5px 0; /* Margin for name and title */
         }
         .linkedin-logo {
+            height: 18px; /* Adjusted LinkedIn logo height */
             width: auto; /* Auto width for the LinkedIn logo */
-            height: 18px; /* Height to match the text size */
             margin-top: 5px; /* Margin above LinkedIn logo */
         }
 
@@ -79,6 +79,9 @@
             .profile-card {
                 width: 100%; /* Full width on smaller screens */
                 margin-bottom: 20px; /* Space between stacked cards */
+            }
+            .profile-section {
+                justify-content: center; /* Center cards on smaller screens */
             }
         }
     </style>
@@ -99,7 +102,7 @@
             <h3>Jean-Philippe 'JP' Persico</h3>
             <p>Managing Partner</p>
             <a href="http://linkedin.com/in/jppersico/" target="_blank">
-                <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+                <img src="linkedin_new.png" alt="LinkedIn Logo" class="linkedin-logo">
             </a>
         </div>
     </div>
@@ -109,7 +112,7 @@
             <h3>Graham Siegel</h3>
             <p>Managing Partner</p>
             <a href="https://www.linkedin.com/in/grahamsiegel/" target="_blank">
-                <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+                <img src="linkedin_new.png" alt="LinkedIn Logo" class="linkedin-logo">
             </a>
         </div>
     </div>
@@ -117,4 +120,5 @@
 
 </body>
 </html>
+
 
