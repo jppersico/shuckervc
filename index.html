@@ -35,12 +35,23 @@
             height: auto;
         }
 
+        /* Title styling */
+        .team-title {
+            text-align: center;
+            font-size: 2em; /* Size of the title */
+            font-weight: bold; /* Make the title bold */
+            padding: 10px 0; /* Spacing above and below the title */
+            background-color: white; /* White background for the title */
+            color: #333; /* Dark color for the title text */
+            margin-bottom: 30px; /* Space below the title */
+        }
+
         /* Profile section styling */
         .profile-section {
             display: flex;
             justify-content: space-around; /* Evenly space the profile cards */
             flex-wrap: wrap; /* Wrap onto the next line if needed */
-            padding: 40px 0; /* Padding around profile section */
+            padding-bottom: 40px; /* Padding below profile section */
         }
         .profile-card {
             display: flex;
@@ -51,6 +62,7 @@
             width: calc(50% - 40px); /* Half width minus the padding */
             max-width: 500px; /* Max width for larger screens */
             align-items: center; /* Align items vertically */
+            margin-top: 20px; /* Spacing above each profile card */
         }
         .profile-card img {
             border-radius: 5px; /* Slight rounding on images */
@@ -70,7 +82,7 @@
         }
         .linkedin-logo {
             height: 18px; /* Adjusted LinkedIn logo height */
-            width: 18px; /* Auto width for the LinkedIn logo */
+            width: auto; /* Auto width for the LinkedIn logo */
             margin-top: 5px; /* Margin above LinkedIn logo */
         }
 
@@ -78,7 +90,7 @@
         @media only screen and (max-width: 767px) {
             .profile-card {
                 width: 100%; /* Full width on smaller screens */
-                margin-bottom: 20px; /* Space between stacked cards */
+                margin-top: 10px; /* Reduce spacing on smaller screens */
             }
             .profile-section {
                 justify-content: center; /* Center cards on smaller screens */
@@ -93,6 +105,9 @@
 <div class="logo-container">
     <img src="Color logo with background.png" alt="ShuckerVC Logo" class="logo">
 </div>
+
+<!-- Title for the Team Section -->
+<div class="team-title">Our Team</div>
 
 <!-- Profile Section -->
 <div class="profile-section">
